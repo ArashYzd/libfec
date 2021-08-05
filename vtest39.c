@@ -117,9 +117,9 @@ int main(int argc,char *argv[]){
 	
 	sr = (sr << 1) | bit;
 	bits[i/8] = sr & 0xff;
-	symbols[3*i+0] = addnoise(parity(sr & V39POLYA),gain,Gain,127.5,255);
-	symbols[3*i+1] = addnoise(parity(sr & V39POLYB),gain,Gain,127.5,255);
-	symbols[3*i+2] = addnoise(parity(sr & V39POLYC),gain,Gain,127.5,255);
+	symbols[3*i+0] = 0;//addnoise(parity(sr & V39POLYA),gain,Gain,127.5,255);
+	symbols[3*i+1] = 0;//addnoise(parity(sr & V39POLYB),gain,Gain,127.5,255);
+	symbols[3*i+2] = 0;//addnoise(parity(sr & V39POLYC),gain,Gain,127.5,255);
       }
       /* Decode it and make sure we get the right answer */
       /* Initialize Viterbi decoder */

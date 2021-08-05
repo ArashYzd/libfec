@@ -288,9 +288,7 @@ static inline int parity(int x){
   return parityb(x);
 }
 
-/* Useful utilities for simulation */
-double normal_rand(double mean, double std_dev);
-unsigned char addnoise(int sym,double amp,double gain,double offset,int clip);
+
 
 extern int Bitcnt[];
 

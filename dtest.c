@@ -71,7 +71,7 @@ int main(int argc,char *argv[]){
     for(i=0;i<512;i++){
       double gv;
 
-      gv = normal_rand(0.,100.);
+      gv = 0;//normal_rand(0.,100.);
       if(csum + fabs(gv) > 32767)
 	break;
       coeffs[i] = gv;

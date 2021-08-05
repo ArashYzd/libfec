@@ -1,6 +1,9 @@
 #include <math.h>
 #include <stdlib.h>
-#include "fec.h"
+
+/* Useful utilities for simulation */
+double normal_rand(double mean, double std_dev);
+unsigned char addnoise(int sym,double amp,double gain,double offset,int clip);
 
 #define	MAX_RANDOM	0x7fffffff
 
@@ -31,7 +34,7 @@ double normal_rand(double mean, double std_dev)
 }
 
 unsigned char addnoise(int sym,double amp,double gain,double offset,int clip){
-  int sample;
+  unsigned char sample;
     
   sample = offset + gain*normal_rand(sym?amp:-amp,1.0);
   /* Clip to 8-bit offset range */

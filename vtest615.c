@@ -119,12 +119,12 @@ int main(int argc,char *argv[]){
 	
 	sr = (sr << 1) | bit;
 	bits[i/8] = sr & 0xff;
-	symbols[6*i+0] = addnoise(parity(sr & V615POLYA),gain,Gain,OFFSET,CLIP);
-	symbols[6*i+1] = addnoise(parity(sr & V615POLYB),gain,Gain,OFFSET,CLIP);
-	symbols[6*i+2] = addnoise(parity(sr & V615POLYC),gain,Gain,OFFSET,CLIP);
-	symbols[6*i+3] = addnoise(parity(sr & V615POLYD),gain,Gain,OFFSET,CLIP);
-	symbols[6*i+4] = addnoise(parity(sr & V615POLYE),gain,Gain,OFFSET,CLIP);
-	symbols[6*i+5] = addnoise(parity(sr & V615POLYF),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+0] = 0;//addnoise(parity(sr & V615POLYA),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+1] = 0;//addnoise(parity(sr & V615POLYB),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+2] = 0;//addnoise(parity(sr & V615POLYC),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+3] = 0;//addnoise(parity(sr & V615POLYD),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+4] = 0;//addnoise(parity(sr & V615POLYE),gain,Gain,OFFSET,CLIP);
+	symbols[6*i+5] = 0;//addnoise(parity(sr & V615POLYF),gain,Gain,OFFSET,CLIP);
       }
       /* Decode it and make sure we get the right answer */
       /* Initialize Viterbi decoder */
